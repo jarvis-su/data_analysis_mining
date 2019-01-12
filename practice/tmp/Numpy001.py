@@ -8,7 +8,6 @@ a = np.zeros(10, dtype=int)
 print(type(a))
 print(a.dtype)
 
-
 a = np.zeros((4,4), dtype=int)
 print(a.dtype)
 print(type(a))

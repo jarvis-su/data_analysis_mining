@@ -7,7 +7,8 @@ import pandas as pd
 dish_profit = './data/catering_dish_profit.xls' #餐饮菜品盈利数据
 data = pd.read_excel(dish_profit, index_col = u'菜品名')
 data = data[u'盈利'].copy()
-data.sort(ascending = False)
+
+# data.sort(ascending = False)
 
 import matplotlib.pyplot as plt #导入图像库
 plt.rcParams['font.sans-serif'] = ['SimHei'] #用来正常显示中文标签
