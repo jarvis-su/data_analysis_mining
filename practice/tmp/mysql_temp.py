@@ -8,14 +8,17 @@ DATABASE = {
     'charset':'utf8'
 }
 
-
-db = pymysql.connect(**DATABASE)
-cursor = db.cursor()
-sql = "select * from DimProduct limit 1000"
-cursor.execute(sql)
-result = cursor.fetchall()
-for row in result:
-    print(row)
-cursor.close()
-db.close()
-
+try:
+    db = pymysql.connect(**DATABASE)
+    cursor = db.cursor()
+    sql = "select * from DimProduct limit 1000"
+    cursor.execute(sql)
+    result = cursor.fetchall()
+    for row in result:
+        print(row)
+    cursor.close()
+    db.close()
+except ConnectionError as e:
+    print(e)
+except RuntimeError as e:
+    print(e)
