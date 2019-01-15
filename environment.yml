@@ -1,0 +1,13 @@
+## conda env export > environment.yml
+
+name: data_analysis_mining
+channels:
+  - defaults
+dependencies:
+  - python=3.6   # or 2.7
+  - numpy
+  - matplotlib
+  - pandas
+  - keras
+  - pymysql
+  - xlrd
