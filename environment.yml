@@ -1,6 +1,7 @@
 ## conda env export > environment.yml
 # conda create -n python36 python=3.6
 # conda create -n tensorflow python=3.6
+# activate tensorflow
 
 name: data_analysis_mining
 channels:
@@ -13,3 +14,4 @@ dependencies:
   - keras
   - pymysql
   - xlrd
+  - gensim
